@@ -148,7 +148,7 @@ steps are described above.
 
 New and edited dashboards must use the new type `custom:egd-hdo-card`. The old type `custom:hdo-chart-card` remains supported only as a compatibility alias for existing dashboards; switch to the new type when editing them.
 
-![HDO Timeline card preview](https://github.com/user-attachments/assets/466bc63c-16c7-4ffc-97e9-a1a8c306e776)
+![HDO Timeline card preview](docs/hdo-card.en.png)
 
 The integration loads the card automatically, there is no need to add it to **Resources**. Just add the card to a dashboard:
 

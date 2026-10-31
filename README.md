@@ -148,7 +148,7 @@ Obrázek zachycuje starší formulář; aktuální výběr kódu a rozpisu popis
 
 Nové i upravované dashboardy musí používat nový typ `custom:egd-hdo-card`. Starý typ `custom:hdo-chart-card` zůstává podporovaný pouze jako kompatibilní alias pro existující dashboardy; při jejich úpravě přejděte na nový typ.
 
-![Ukázka HDO Timeline karty](https://github.com/user-attachments/assets/466bc63c-16c7-4ffc-97e9-a1a8c306e776)
+![Ukázka HDO Timeline karty](docs/hdo-card.cs.png)
 
 Integrace kartu načítá automaticky, do **Zdrojů** ji není potřeba přidávat. Kartu stačí přidat do dashboardu:
 
