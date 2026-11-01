@@ -25,7 +25,6 @@ from .const import (
     CONF_CONFIG_TYPE,
     CONF_COLOR_VT,
     CONF_COLOR_NT,
-    CONF_PRICE_UNIT,
     CONF_SCHEDULE,
     CONFIG_TYPE_CLASSIC,
     CONFIG_TYPE_HDO_CODES,
@@ -34,7 +33,6 @@ from .const import (
     DEFAULT_PRICE_VT,
     DEFAULT_COLOR_VT,
     DEFAULT_COLOR_NT,
-    DEFAULT_PRICE_UNIT,
 )
 from .coordinator import EGDDistribuceCoordinator
 
@@ -92,10 +90,9 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
         CONF_COLOR_NT,
         entry.data.get(CONF_COLOR_NT, DEFAULT_COLOR_NT)
     )
-    price_unit = entry.options.get(
-        CONF_PRICE_UNIT,
-        entry.data.get(CONF_PRICE_UNIT, DEFAULT_PRICE_UNIT)
-    )
+    currency = hass.config.currency
+    price_currency = "Kč" if currency == "CZK" else currency
+    price_unit = f"{price_currency}/kWh"
 
     # Get type-specific config
     psc = entry.data.get(CONF_PSC)
